@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Resume Builder</title>
+    </head>
+    <style>
+        #resume_builder_parent{
+            
+            border: 2px solid black;
+            margin-bottom: 10px;
+            background-color: cornsilk;   
+        }
+        input[type=text], select {
+            width: 200px;
+            padding: 10px 10px;
+            margin: 4px 10px;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 1px;
+            box-sizing: border-box;
+          }
+          input[type=email], select {
+            width: 200px;
+            padding: 10px 10px;
+            margin: 4px 10px;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 1px;
+            box-sizing: border-box;
+          }
+          input[type=number], select {
+            width: 200px;
+            padding: 10px 10px;
+            margin: 4px 10px;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 2px;
+            box-sizing: border-box;
+          }
+          input[type=Date], select {
+            width: 200px;
+            padding: 10px 10px;
+            margin: 4px 10px;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 2px;
+            box-sizing: border-box;
+          }
+          #resume_builder_header{
+            font-weight: 100;
+            font-style: italic;
+            font-size: larger;
+          }
+          h4{
+            font-weight: 100;
+            font-style: initial;
+            font-size: larger;
+          }
+          h2{
+            font-weight: 100;
+            font-style: initial;
+            font-size: larger;
+            font-size: x-large;
+          }
+          td{
+            
+            font-style: initial;
+            
+          }
+          th{
+            font-weight: 100;
+            font-style: initial;
+            font-size: larger;
+          }
+          
+          #resume_builder_sample{
+            border: 1px solid black;
+            margin-top: 10px;
+            background-color: blanchedalmond;
+            margin-left: 10px;
+            margin-right:10px;
+            padding-bottom: 20px;
+          }
+          .table_container{
+            border: 1px solid black;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            text-align: center;
+            background-color: blanchedalmond;
+            margin-left: 10px;
+            margin-right:10px;
+            
+          }
+          .basic_contianer{
+            border: 1px solid black;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            background-color: blanchedalmond;
+            margin-left: 10px;
+            margin-right:10px;
+          }
+          .eductional_container{
+            border: 1px solid black;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            background-color: blanchedalmond;
+            margin-left:10px;
+            margin-right:10px;
+          }
+          .skill_container{
+            border: 1px solid black;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            background-color: blanchedalmond;
+            margin-left: 10px;
+            margin-right:10px;
+          }
+          .decription{
+            border: 1px solid black;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            background-color: blanchedalmond;
+            margin-left: 10px;
+            margin-right:10px;
+            padding-left: 10px;
+          }
+          .decription_detail{
+            border: 1px solid black;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            background-color: blanchedalmond;
+            margin-left: 10px;
+            margin-right:10px;
+            padding-left: 10px;
+          }
+          .resetbtn{
+            background-color: burlywood;
+            border:none;
+            padding:10px;
+            margin-left: 500px;
+            margin: 50px;
+            
+          }
+          .submitbtn{
+            background-color: burlywood;
+            border:none;
+            padding:10px;
+            margin-left: 200px;
+          }
+
+          .testarea{
+            height:100px;
+            width: 90%;
+            margin-left: 10px;
+
+          }
+          
+    </style>
+    <script>
+
+        function handleOnSubmit(e){
+            e.preventDefault();
+            var fdata = new FormData(document.getElementById("regForm"));
+            console.log ("ABS="+ JSON.stringify(fdata));
+            window.localStorage.setItem("formDate", JSON.stringify(Object.fromEntries(fdata)));
+            window.location.href="file:///C:/Users/sanjeevi.s/OneDrive%20-%20Prodapt%20Solutions%20Private%20Limited/Documents/sanjeevi/Html%20Basic/Resume_build.html"
+        }
+    </script>
+    <body>
+        <div id="resume_builder_parent">
+            <div id="resume_builder_header">
+                
+                <center>
+                    <h2>Your Resume Builder</h2>
+                    
+                </center>
+                
+            </div>
+           
+            <div id="resume_builder_sample">
+                <h4>Check out the sample resume here.</h4>
+                <video width="400" height="400" controls style="background-color:black;">
+                    <source src="myvideo.mp4">
+                </video>
+                
+                <img src="coffeemug.jpg" width="400" height="400">
+                <iframe src="mypdf.pdf" width="400" height="400" ></iframe>
+            </div>
+            
+            <div id="resume_builder_form">
+                <center>
+                    <h2>Build you resume here!</h2>
+                </center>
+                
+                <form onsubmit="handleOnSubmit(event)" id="regForm">
+                    <h4>Enter Basic Informations</h4>
+                    <div class="basic_contianer">
+                    <table width="1000">
+                        <tr>
+                            <td> <label> Enter First Name: </label> </td>
+                            <td> <input type="text" name="fname" placeholder="Enter First Name"> </td>
+                            <td> <label> Enter Last Name: </label> </td>
+                            <td> <input type="text" name="lastName" placeholder="Enter Last Name"> </td>
+                        </tr>
+                        <tr>
+                            <td> <label> Enter Email Id: </label> </td>
+                            <td> <input type="email" name="email" placeholder="Enter Email Id"> </td>
+                            <td> <label> Enter Mobile Number: </label> </td>
+                            <td> <input type="number" name="mobile" placeholder="Enter Mobile Number"> </td>
+                        </tr>
+                        <tr>
+                            <td> <label> Enter Date of Birth: </label> </td>
+                            <td> <input type="date" name="dob"> </td>
+                            <td> <label> Enter Gender: </label> </td>
+                            <td> <select name="gender">
+                                    <option value="">-select-</option>
+                                    <option value="M">Male</option>
+                                    <option value="F">Female</option>
+                                    <option value="O">Other</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                    <h4>Enter Educational Qualification</h4>
+                    <div class="eductional_container">
+                    <table width="1000">
+                        <thead>
+                            <tr>
+                                <th> Education </th>
+                                <th> School/University</th>
+                                <th> Year of Passing </th>
+                                <th> Percentage/CGPA </th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td> <label> Post Graduation </label> </td>
+                            <td> <input type="text" name="university1" placeholder="Enter School/University"> </td>
+                            <td> <input type="number" name="yearofpassing1" placeholder="Enter Year of Passing"> </td>
+                            <td> <input type="number" name="percentage1" placeholder="Enter Percentage/CGPA"> </td>
+                        </tr>
+                        <tr>
+                            <td> <label> Graduation: </label> </td>
+                            <td> <input type="text" name="university2" placeholder="Enter School/University"> </td>
+                            <td> <input type="number" name="yearofpassing2" placeholder="Enter Year of Passing"> </td>
+                            <td> <input type="number" name="percentage2" placeholder="Enter Percentage/CGPA"> </td>
+                        </tr>
+                        <!-- <tr>
+                            <td> <label> Intermidate </label> </td>
+                            <td> <input type="text" name="university3" placeholder="Enter School/University"> </td>
+                            <td> <input type="number" name="yearofpassing3" placeholder="Enter Year of Passing"> </td>
+                            <td> <input type="number" name="percentage3" placeholder="Enter Percentage/CGPA"> </td>
+                        </tr> -->
+                        <tr>
+                            <td> <label> High School </label> </td>
+                            <td> <input type="text" name="university4" placeholder="Enter School/University"> </td>
+                            <td> <input type="number" name="yearofpassing4" placeholder="Enter Year of Passing"> </td>
+                            <td> <input type="number" name="percentage4" placeholder="Enter Percentage/CGPA"> </td>
+                        </tr>
+                        
+                    </table>
+                </div>
+                    <h4>Enter Experience:</h4>
+                    <div class="table_container">
+                    <table width="1000">
+                        <thead>
+                            <tr>
+                                <th> Organization </th>
+                                <th> Joining Date</th>
+                                <th> Releaving Date </th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td> <input type="text" name="organization1" placeholder="Enter Organization"> </td>
+                            <td> <input type="date" name="doj1" placeholder="Enter Joining Date"> </td>
+                            <td> <input type="date" name="dor1" placeholder="Enter Releaving Date"> </td>
+                        </tr>
+                        <tr>
+                            <td> <input type="text" name="organization2" placeholder="Enter Organization"> </td>
+                            <td> <input type="date" name="doj2" placeholder="Enter Joining Date"> </td>
+                            <td> <input type="date" name="dor2" placeholder="Enter Releaving Date"> </td>
+                        </tr>
+                        
+                    </table>
+                </div>
+                    <h4>Enter Skills:</h4>
+                    <div class="skill_container">
+                    <table width="1000">
+                        <thead>
+                            <tr>
+                                <th> Technology </th>
+                                <th> Version Worked On</th>
+                                <th> Last Worked On </th>
+                                <th> Ratting </th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td> <input type="text" name="tech1" placeholder="Enter Technology"> </td>
+                            <td> <input type="text" name="version1" placeholder="Enter Version Worked On"> </td>
+                            <td> <select name="lastworkedon1">
+                                    <option value="0">-select- </option>
+                                    <option value="1">Last Month </option>
+                                    <option value="2">Within 6 months </option>
+                                    <option value="3">Before 6 Months </option>
+                                </select>
+                            </td>
+                            <td> <input type="number" max="10" name="rate1" placeholder="Rate yourself out of 10"> </td>
+                        </tr>
+                        <tr>
+                            <td> <input type="text" name="tech2" placeholder="Enter Technology"> </td>
+                            <td> <input type="text" name="version2" placeholder="Enter Version Worked On"> </td>
+                            <td> <select name="lastworkedon2">
+                                    <option value="0">-select- </option>
+                                    <option value="1">Last Month </option>
+                                    <option value="2">Within 6 months </option>
+                                    <option value="3">Before 6 Months </option>
+                                </select>
+                            </td>
+                            <td> <input type="number" max="10" name="rate2" placeholder="Rate yourself out of 10"> </td>
+                        </tr>
+                        
+                    </table>
+                </div>
+                    <h4>Describe Yourself:</h4>
+                    
+                    <textarea name="description"  class="testarea" placeholder="Enter you wishdom"></textarea>
+                
+                    <h4>Declaration:</h4>
+                    
+                    <textarea name="description"  class="testarea" placeholder="Enter you wishdom"></textarea>
+                
+
+                
+                        <button type="reset"  class="resetbtn">Reset</button>                 
+                        <button type="submit"  class="submitbtn">Submit</button>
+                      
+                </form>   
+            </div>
+        </div>
+    </body>
+</html>
