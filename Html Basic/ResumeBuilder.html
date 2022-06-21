@@ -6,7 +6,7 @@
     <style>
         #resume_builder_parent{
             
-            border: 2px solid black;
+            border: none solid black;
             margin-bottom: 10px;
             background-color: cornsilk;   
         }
@@ -61,7 +61,7 @@
             font-style: initial;
             font-size: larger;
             font-size: x-large;
-          }
+          } 
           td{
             
             font-style: initial;
@@ -74,7 +74,7 @@
           }
           
           #resume_builder_sample{
-            border: 1px solid black;
+            border: none black;
             margin-top: 10px;
             background-color: blanchedalmond;
             margin-left: 10px;
@@ -82,7 +82,7 @@
             padding-bottom: 20px;
           }
           .table_container{
-            border: 1px solid black;
+            border: none black;
             padding-top: 20px;
             padding-bottom: 20px;
             text-align: center;
@@ -92,7 +92,7 @@
             
           }
           .basic_contianer{
-            border: 1px solid black;
+            border: none black;
             padding-top: 20px;
             padding-bottom: 20px;
             background-color: blanchedalmond;
@@ -100,7 +100,7 @@
             margin-right:10px;
           }
           .eductional_container{
-            border: 1px solid black;
+            border: none solid black;
             padding-top: 20px;
             padding-bottom: 20px;
             background-color: blanchedalmond;
@@ -108,7 +108,7 @@
             margin-right:10px;
           }
           .skill_container{
-            border: 1px solid black;
+            border: none solid black;
             padding-top: 20px;
             padding-bottom: 20px;
             background-color: blanchedalmond;
@@ -116,7 +116,7 @@
             margin-right:10px;
           }
           .decription{
-            border: 1px solid black;
+            border: none solid black;
             padding-top: 20px;
             padding-bottom: 20px;
             background-color: blanchedalmond;
@@ -125,7 +125,7 @@
             padding-left: 10px;
           }
           .decription_detail{
-            border: 1px solid black;
+            border: none solid black;
             padding-top: 20px;
             padding-bottom: 20px;
             background-color: blanchedalmond;
@@ -154,6 +154,9 @@
             margin-left: 10px;
 
           }
+          label{
+            font-weight: 100;
+          }
           
     </style>
     <script>
@@ -177,7 +180,7 @@
                 
             </div>
            
-            <div id="resume_builder_sample">
+            <!-- <div id="resume_builder_sample">
                 <h4>Check out the sample resume here.</h4>
                 <video width="400" height="400" controls style="background-color:black;">
                     <source src="myvideo.mp4">
@@ -185,7 +188,7 @@
                 
                 <img src="coffeemug.jpg" width="400" height="400">
                 <iframe src="mypdf.pdf" width="400" height="400" ></iframe>
-            </div>
+            </div> -->
             
             <div id="resume_builder_form">
                 <center>
@@ -193,14 +196,17 @@
                 </center>
                 
                 <form onsubmit="handleOnSubmit(event)" id="regForm">
-                    <h4>Enter Basic Informations</h4>
+                    <h2>Enter Basic Informations</h2>
+                    <!-- <label for="myfile"><h4>Upload Your Profile Photo:</h4></label>
+                       <input type="file" id="myfile" name="myfile"> -->
+                       <br>
                     <div class="basic_contianer">
                     <table width="1000">
                         <tr>
                             <td> <label> Enter First Name: </label> </td>
-                            <td> <input type="text" name="fname" placeholder="Enter First Name"> </td>
+                            <td> <input type="text" name="fname" id="firstName"placeholder="Enter First Name"> </td>
                             <td> <label> Enter Last Name: </label> </td>
-                            <td> <input type="text" name="lastName" placeholder="Enter Last Name"> </td>
+                            <td> <input type="text" name="lastName" id="lastName" placeholder="Enter Last Name"> </td>
                         </tr>
                         <tr>
                             <td> <label> Enter Email Id: </label> </td>
@@ -223,7 +229,7 @@
                     </table>
                 </div>
 
-                    <h4>Enter Educational Qualification</h4>
+                    <h2>Enter Educational Qualification</h2>
                     <div class="eductional_container">
                     <table width="1000">
                         <thead>
@@ -261,7 +267,7 @@
                         
                     </table>
                 </div>
-                    <h4>Enter Experience:</h4>
+                    <h2>Enter Experience:</h2>
                     <div class="table_container">
                     <table width="1000">
                         <thead>
@@ -284,7 +290,7 @@
                         
                     </table>
                 </div>
-                    <h4>Enter Skills:</h4>
+                    <h2>Enter Skills:</h2>
                     <div class="skill_container">
                     <table width="1000">
                         <thead>
@@ -322,13 +328,13 @@
                         
                     </table>
                 </div>
-                    <h4>Describe Yourself:</h4>
+                    <h2>Describe Yourself:</h2>
                     
-                    <textarea name="description"  class="testarea" placeholder="Enter you wishdom"></textarea>
+                    <textarea name="description"  class="testarea"  id="testarea1" placeholder="Enter you wishdom"></textarea>
                 
-                    <h4>Declaration:</h4>
+                    <h2>Declaration:</h2>
                     
-                    <textarea name="description"  class="testarea" placeholder="Enter you wishdom"></textarea>
+                    <textarea name="description1"  class="testarea" id="testarea2" placeholder="Enter you wishdom"></textarea>
                 
 
                 
