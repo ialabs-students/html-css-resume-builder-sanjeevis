@@ -164,7 +164,7 @@
         function handleOnSubmit(e){
             e.preventDefault();
             var fdata = new FormData(document.getElementById("regForm"));
-            console.log ("ABS="+ JSON.stringify(fdata));
+            console.log ("Main="+ JSON.stringify(fdata));
             window.localStorage.setItem("formDate", JSON.stringify(Object.fromEntries(fdata)));
             window.location.href="file:///C:/Users/sanjeevi.s/OneDrive%20-%20Prodapt%20Solutions%20Private%20Limited/Documents/sanjeevi/Html%20Basic/Resume_build.html"
         }
@@ -178,18 +178,7 @@
                     
                 </center>
                 
-            </div>
-           
-            <!-- <div id="resume_builder_sample">
-                <h4>Check out the sample resume here.</h4>
-                <video width="400" height="400" controls style="background-color:black;">
-                    <source src="myvideo.mp4">
-                </video>
-                
-                <img src="coffeemug.jpg" width="400" height="400">
-                <iframe src="mypdf.pdf" width="400" height="400" ></iframe>
-            </div> -->
-            
+            </div>   
             <div id="resume_builder_form">
                 <center>
                     <h2>Build you resume here!</h2>
@@ -197,8 +186,6 @@
                 
                 <form onsubmit="handleOnSubmit(event)" id="regForm">
                     <h2>Enter Basic Informations</h2>
-                    <!-- <label for="myfile"><h4>Upload Your Profile Photo:</h4></label>
-                       <input type="file" id="myfile" name="myfile"> -->
                        <br>
                     <div class="basic_contianer">
                     <table width="1000">
@@ -252,12 +239,6 @@
                             <td> <input type="number" name="yearofpassing2" placeholder="Enter Year of Passing"> </td>
                             <td> <input type="number" name="percentage2" placeholder="Enter Percentage/CGPA"> </td>
                         </tr>
-                        <!-- <tr>
-                            <td> <label> Intermidate </label> </td>
-                            <td> <input type="text" name="university3" placeholder="Enter School/University"> </td>
-                            <td> <input type="number" name="yearofpassing3" placeholder="Enter Year of Passing"> </td>
-                            <td> <input type="number" name="percentage3" placeholder="Enter Percentage/CGPA"> </td>
-                        </tr> -->
                         <tr>
                             <td> <label> High School </label> </td>
                             <td> <input type="text" name="university4" placeholder="Enter School/University"> </td>
@@ -336,6 +317,11 @@
                     
                     <textarea name="description1"  class="testarea" id="testarea2" placeholder="Enter you wishdom"></textarea>
                 
+                    <!-- <div class="Uploadphoto">
+
+                        <label for="myfile"><h2>Upload Your Photo</h2></label>
+                        <input type="file" id="myfile" name="myfile">
+                    </div> -->
 
                 
                         <button type="reset"  class="resetbtn">Reset</button>                 
